@@ -1,0 +1,24 @@
+CREATE OR REPLACE Procedure PF_InsertBank
+    ( 
+      
+       bank nvarchar2  
+           
+       
+      )
+    IS
+      SeqNumber integer;
+    begin 
+    
+    
+     select nvl(Count(BD_CODE),0) into SeqNumber from PF_BANK_DETAIL;
+            SeqNumber :=SeqNumber +1;
+                       
+        Insert into  PF_BANK_DETAIL(BD_CODE,DESCRIPTION)
+        values (SeqNumber,bank );
+    
+       commit;
+        
+             
+       
+    end;
+/

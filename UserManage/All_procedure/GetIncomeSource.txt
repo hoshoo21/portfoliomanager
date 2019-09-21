@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure PF_GetIncomeSource
+(    
+      prc out   sys_refcursor
+      )
+    IS
+    begin 
+      open prc for
+ select * from  PF_INCOME_SOURCE
+;
+
+end;
+/

@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure PF_DeleteCriteria
+    (
+      critCode nvarchar2
+       
+       
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_CRITERIA where CRITERIA_CODE=critCode;
+    end;

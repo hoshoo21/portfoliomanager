@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure GetProduct
+(    
+      prc out   sys_refcursor
+      )
+    IS
+    begin 
+      open prc for
+ select * from  PF_PRODUCTS
+;
+
+end;
+/

@@ -1,0 +1,21 @@
+CREATE OR REPLACE Procedure PF_UpdatePaymentType
+    ( 
+      ptcode int,
+       payType   nvarchar2    
+      
+        
+      )
+    IS
+     
+    begin 
+    
+        Update PF_PAYMENT_TYPE
+        set DESCRIPTION = payType   
+        where PT_CODE = ptcode; 
+        
+    
+       commit;
+        
+             
+       
+    end;

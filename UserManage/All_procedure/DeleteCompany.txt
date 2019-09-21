@@ -1,0 +1,10 @@
+CREATE OR REPLACE Procedure PF_DeleteCompany
+    (
+      comCode nvarchar2
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_COMPANIES where C_CODE=comCode;
+    end;

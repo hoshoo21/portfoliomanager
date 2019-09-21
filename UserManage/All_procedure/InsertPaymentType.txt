@@ -1,0 +1,24 @@
+CREATE OR REPLACE Procedure PF_InsertPaymentType
+    ( 
+      
+       PayType   nvarchar2   
+    
+        
+      )
+    IS
+      SeqNumber integer;
+    begin 
+    
+    
+     select nvl(Count(PT_CODE),0) into SeqNumber from PF_PAYMENT_TYPE ;
+              SeqNumber :=SeqNumber +1;
+                       
+        Insert into  PF_PAYMENT_TYPE(PT_CODE,DESCRIPTION)
+        values (SeqNumber,PayType);
+    
+       commit;
+        
+             
+       
+    end;
+/

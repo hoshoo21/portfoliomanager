@@ -1,0 +1,24 @@
+CREATE OR REPLACE Procedure PF_InsertProduct
+    ( 
+      
+       productname   nvarchar2,       
+       active   nvarchar2
+        
+      )
+    IS
+      SeqNumber integer;
+    begin 
+    
+    
+     select nvl(Count(P_CODE),0) into SeqNumber from PF_PRODUCTS ;
+              SeqNumber :=SeqNumber +1;
+                       
+        Insert into  PF_PRODUCTS(P_CODE,DESCRIPTION, ACTIVE)
+        values (SeqNumber,productname, active);
+    
+       commit;
+        
+             
+       
+    end;
+/

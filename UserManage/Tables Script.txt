@@ -1,0 +1,389 @@
+CREATE TABLE hiltest.pf_bank_detail (
+    bd_code       VARCHAR2(50 BYTE) NOT NULL,
+    description   VARCHAR2(100 BYTE)
+);
+
+CREATE UNIQUE INDEX hiltest.pf_bank_detail_pk ON
+    hiltest.pf_bank_detail ( bd_code ASC );
+
+ALTER TABLE hiltest.pf_bank_detail ADD CONSTRAINT pf_bank_detail_pk PRIMARY KEY ( bd_code );
+
+CREATE TABLE hiltest.pf_bank_detail_client (
+    client_code   VARCHAR2(50 BYTE) NOT NULL,
+    bd_code       VARCHAR2(50 BYTE),
+    active        NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_bank_detail_client_pk ON
+    hiltest.pf_bank_detail_client ( client_code ASC );
+
+ALTER TABLE hiltest.pf_bank_detail_client ADD CONSTRAINT pf_bank_detail_client_pk PRIMARY KEY ( client_code );
+
+CREATE TABLE hiltest.pf_broker_client (
+    broker_code   NUMBER NOT NULL,
+    client_code   NUMBER NOT NULL
+);
+
+CREATE TABLE hiltest.pf_broker_setup (
+    broker_code   NUMBER NOT NULL,
+    description   VARCHAR2(100 BYTE),
+    ntn           NUMBER,
+    location      VARCHAR2(100 BYTE),
+    phone         NUMBER,
+    email         VARCHAR2(50 BYTE),
+    active        NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_broker_setup_pk ON
+    hiltest.pf_broker_setup ( broker_code ASC );
+
+ALTER TABLE hiltest.pf_broker_setup ADD CONSTRAINT pf_broker_setup_pk PRIMARY KEY ( broker_code );
+
+CREATE TABLE hiltest.pf_client_setup (
+    client_code       VARCHAR2(50 BYTE) NOT NULL,
+    c_code            VARCHAR2(50 BYTE),
+    description       VARCHAR2(100 BYTE),
+    gender            VARCHAR2(50 BYTE),
+    nic               NUMBER,
+    ntn               NUMBER,
+    old               NUMBER,
+    cs_date           DATE,
+    active            NUMBER,
+    is_code           VARCHAR2(50 BYTE),
+    pt_code           VARCHAR2(50 BYTE),
+    client_category   VARCHAR2(100 BYTE),
+    islamic           NUMBER,
+    cp_online         NUMBER,
+    reference         VARCHAR2(50 BYTE),
+    contact_no        VARCHAR2(50 BYTE),
+    email             VARCHAR2(50 BYTE),
+    address           VARCHAR2(100 BYTE),
+    userid            VARCHAR2(50 BYTE)
+);
+
+CREATE UNIQUE INDEX hiltest.pf_client_setup_pk ON
+    hiltest.pf_client_setup ( client_code ASC );
+
+ALTER TABLE hiltest.pf_client_setup ADD CONSTRAINT pf_client_setup_pk PRIMARY KEY ( client_code );
+
+CREATE TABLE hiltest.pf_companies (
+    c_code        NUMBER NOT NULL,
+    description   VARCHAR2(100 BYTE),
+    ntn           NUMBER,
+    active        NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_companies_pk ON
+    hiltest.pf_companies ( c_code ASC );
+
+ALTER TABLE hiltest.pf_companies ADD CONSTRAINT pf_companies_pk PRIMARY KEY ( c_code );
+
+CREATE TABLE hiltest.pf_company_setup (
+    company_symbol   VARCHAR2(100 BYTE),
+    description      VARCHAR2(100 BYTE)
+);
+
+CREATE TABLE hiltest.pf_conditon (
+    conditon_code   NUMBER NOT NULL,
+    description     NVARCHAR2(100),
+    active          NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_conditon_pk ON
+    hiltest.pf_conditon ( conditon_code ASC );
+
+ALTER TABLE hiltest.pf_conditon ADD CONSTRAINT pf_conditon_pk PRIMARY KEY ( conditon_code );
+
+CREATE TABLE hiltest.pf_criteria (
+    criteria_code   NUMBER NOT NULL,
+    description     NVARCHAR2(100),
+    active          NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_criteria_pk ON
+    hiltest.pf_criteria ( criteria_code ASC );
+
+ALTER TABLE hiltest.pf_criteria ADD CONSTRAINT pf_criteria_pk PRIMARY KEY ( criteria_code );
+
+CREATE TABLE hiltest.pf_expert_crit_gen_specific (
+    ecgs_code       NUMBER NOT NULL,
+    edgs_code       NUMBER,
+    criteria_code   NUMBER,
+    conditon_code   NUMBER,
+    values1         NVARCHAR2(100),
+    values2         NVARCHAR2(100),
+    active          NUMBER,
+    emg_code        NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_expert_crit_gen_specific_pk ON
+    hiltest.pf_expert_crit_gen_specific ( ecgs_code ASC );
+
+ALTER TABLE hiltest.pf_expert_crit_gen_specific ADD CONSTRAINT pf_expert_crit_gen_specific_pk PRIMARY KEY ( ecgs_code );
+
+CREATE TABLE hiltest.pf_expert_det_general_specific (
+    edgs_code   NUMBER NOT NULL,
+    p_code      NUMBER,
+    ems_code    NUMBER,
+    active      NUMBER,
+    emg_code    NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_exper_details_general_sp_pk ON
+    hiltest.pf_expert_det_general_specific ( edgs_code ASC );
+
+ALTER TABLE hiltest.pf_expert_det_general_specific ADD CONSTRAINT pf_exper_details_general_sp_pk PRIMARY KEY ( edgs_code );
+
+CREATE TABLE hiltest.pf_expert_details_general (
+    edg_code   NUMBER NOT NULL,
+    emg_code   NUMBER NOT NULL,
+    p_code     NUMBER NOT NULL,
+    active     NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_experdetailsgeneral_pk ON
+    hiltest.pf_expert_details_general ( edg_code ASC );
+
+ALTER TABLE hiltest.pf_expert_details_general ADD CONSTRAINT pf_experdetailsgeneral_pk PRIMARY KEY ( edg_code );
+
+CREATE TABLE hiltest.pf_expert_master_general (
+    emg_code      NUMBER NOT NULL,
+    description   VARCHAR2(100 BYTE),
+    active        NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_product_master_pk1 ON
+    hiltest.pf_expert_master_general ( emg_code ASC );
+
+ALTER TABLE hiltest.pf_expert_master_general ADD CONSTRAINT pf_product_master_pk PRIMARY KEY ( emg_code );
+
+CREATE TABLE hiltest.pf_expert_master_specific (
+    ems_code      NUMBER NOT NULL,
+    emg_code      NUMBER,
+    description   NVARCHAR2(100),
+    active        NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_expert_master_specific_pk ON
+    hiltest.pf_expert_master_specific ( ems_code ASC );
+
+ALTER TABLE hiltest.pf_expert_master_specific ADD CONSTRAINT pf_expert_master_specific_pk PRIMARY KEY ( ems_code );
+
+CREATE TABLE hiltest.pf_expert_result (
+    er_code       NUMBER NOT NULL,
+    edg_code      NUMBER,
+    emg_code      NUMBER,
+    constituent   VARCHAR2(100 BYTE),
+    datetime      DATE,
+    userid        VARCHAR2(50 BYTE),
+    active        NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_expert_result_pk ON
+    hiltest.pf_expert_result ( er_code ASC );
+
+ALTER TABLE hiltest.pf_expert_result ADD CONSTRAINT pf_expert_result_pk PRIMARY KEY ( er_code );
+
+CREATE TABLE hiltest.pf_income_source (
+    is_code       VARCHAR2(50 BYTE) NOT NULL,
+    description   VARCHAR2(100 BYTE)
+);
+
+CREATE UNIQUE INDEX hiltest.pf_income_source_pk ON
+    hiltest.pf_income_source ( is_code ASC );
+
+ALTER TABLE hiltest.pf_income_source ADD CONSTRAINT pf_income_source_pk PRIMARY KEY ( is_code );
+
+CREATE TABLE hiltest.pf_joint_holder_client (
+    client_code   VARCHAR2(50 BYTE) NOT NULL,
+    sno           NUMBER,
+    name          VARCHAR2(100 BYTE),
+    address       VARCHAR2(100 BYTE),
+    phone         NUMBER,
+    nic           NUMBER,
+    active        NUMBER,
+    rs_code       VARCHAR2(50 BYTE)
+);
+
+CREATE UNIQUE INDEX hiltest.pf_joint_holder_client_pk ON
+    hiltest.pf_joint_holder_client ( client_code ASC );
+
+ALTER TABLE hiltest.pf_joint_holder_client ADD CONSTRAINT pf_joint_holder_client_pk PRIMARY KEY ( client_code );
+
+CREATE TABLE hiltest.pf_nominee_client (
+    client_code   NUMBER NOT NULL,
+    sno           NUMBER,
+    name          VARCHAR2(100 BYTE),
+    nic           NUMBER,
+    active        NUMBER,
+    rs_code       VARCHAR2(50 BYTE),
+    shared        NUMBER,
+    phone         NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_nominee_client_pk ON
+    hiltest.pf_nominee_client ( client_code ASC );
+
+ALTER TABLE hiltest.pf_nominee_client ADD CONSTRAINT pf_nominee_client_pk PRIMARY KEY ( client_code );
+
+CREATE TABLE hiltest.pf_payment_type (
+    pt_code       VARCHAR2(50 BYTE) NOT NULL,
+    description   VARCHAR2(100 BYTE)
+);
+
+CREATE UNIQUE INDEX hiltest.pf_payment_type_pk ON
+    hiltest.pf_payment_type ( pt_code ASC );
+
+ALTER TABLE hiltest.pf_payment_type ADD CONSTRAINT pf_payment_type_pk PRIMARY KEY ( pt_code );
+
+CREATE TABLE hiltest.pf_pf_expert_criteria_general (
+    ecg_code        NUMBER NOT NULL,
+    edg_code        NUMBER,
+    criteria_code   NUMBER,
+    conditon_code   NUMBER,
+    val_con_code    NUMBER,
+    active          NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_pf_expertcriteriageneral_pk ON
+    hiltest.pf_pf_expert_criteria_general ( ecg_code ASC );
+
+ALTER TABLE hiltest.pf_pf_expert_criteria_general ADD CONSTRAINT pf_pf_expertcriteriageneral_pk PRIMARY KEY ( ecg_code );
+
+CREATE TABLE hiltest.pf_products (
+    p_code        NUMBER NOT NULL,
+    description   NVARCHAR2(100),
+    active        NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_products_pk ON
+    hiltest.pf_products ( p_code ASC );
+
+ALTER TABLE hiltest.pf_products ADD CONSTRAINT pf_products_pk PRIMARY KEY ( p_code );
+
+CREATE TABLE hiltest.pf_relationship (
+    rs_code       VARCHAR2(50 BYTE) NOT NULL,
+    description   VARCHAR2(100 BYTE)
+);
+
+CREATE UNIQUE INDEX hiltest.pf_relationship_pk ON
+    hiltest.pf_relationship ( rs_code ASC );
+
+ALTER TABLE hiltest.pf_relationship ADD CONSTRAINT pf_relationship_pk PRIMARY KEY ( rs_code );
+
+CREATE TABLE hiltest.pf_trans_detail (
+    trans_no          NUMBER,
+    trans_detail_no   NUMBER,
+    company           VARCHAR2(100 BYTE)
+);
+
+CREATE TABLE hiltest.pf_trans_master (
+    trans_no     NUMBER NOT NULL,
+    trans_date   DATE,
+    c_code       NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_trans_master_pk ON
+    hiltest.pf_trans_master ( trans_no ASC );
+
+ALTER TABLE hiltest.pf_trans_master ADD CONSTRAINT pf_trans_master_pk PRIMARY KEY ( trans_no );
+
+CREATE TABLE hiltest.pf_values (
+    value_code     NUMBER NOT NULL,
+    desceription   NVARCHAR2(100),
+    active         NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_values_pk ON
+    hiltest.pf_values ( value_code ASC );
+
+ALTER TABLE hiltest.pf_values ADD CONSTRAINT pf_values_pk PRIMARY KEY ( value_code );
+
+CREATE TABLE hiltest.pf_values_conditions (
+    val_con_code    NUMBER NOT NULL,
+    conditon_code   NUMBER,
+    value_code      NUMBER
+);
+
+CREATE UNIQUE INDEX hiltest.pf_values_conditions_pk ON
+    hiltest.pf_values_conditions ( val_con_code ASC );
+
+ALTER TABLE hiltest.pf_values_conditions ADD CONSTRAINT pf_values_conditions_pk PRIMARY KEY ( val_con_code );
+
+ALTER TABLE hiltest.pf_broker_client ADD CONSTRAINT pf_broker_client_fk1 FOREIGN KEY ( broker_code )
+    REFERENCES hiltest.pf_broker_setup ( broker_code );
+
+ALTER TABLE hiltest.pf_broker_client ADD CONSTRAINT pf_broker_client_fk2 FOREIGN KEY ( client_code )
+    REFERENCES hiltest.pf_nominee_client ( client_code );
+
+ALTER TABLE hiltest.pf_expert_crit_gen_specific ADD CONSTRAINT pf_expert_crit_gen_specif_fk1 FOREIGN KEY ( emg_code )
+    REFERENCES hiltest.pf_expert_master_general ( emg_code );
+
+ALTER TABLE hiltest.pf_trans_detail ADD CONSTRAINT pf_trans_detail_fk2v1 FOREIGN KEY ( trans_no )
+    REFERENCES hiltest.pf_trans_master ( trans_no );
+
+ALTER TABLE hiltest.pf_trans_master ADD CONSTRAINT pf_trans_master_fk1 FOREIGN KEY ( c_code )
+    REFERENCES hiltest.pf_companies ( c_code );
+
+ALTER TABLE hiltest.pf_values_conditions ADD CONSTRAINT pf_values_conditions_fk1 FOREIGN KEY ( value_code )
+    REFERENCES hiltest.pf_values ( value_code );
+
+ALTER TABLE hiltest.pf_values_conditions ADD CONSTRAINT pf_values_conditions_fk2 FOREIGN KEY ( conditon_code )
+    REFERENCES hiltest.pf_conditon ( conditon_code );
+
+ALTER TABLE hiltest.pf_expert_details_general ADD FOREIGN KEY ( p_code )
+    REFERENCES hiltest.pf_products ( p_code );
+
+ALTER TABLE hiltest.pf_expert_details_general ADD FOREIGN KEY ( emg_code )
+    REFERENCES hiltest.pf_expert_master_general ( emg_code );
+
+ALTER TABLE hiltest.pf_pf_expert_criteria_general ADD FOREIGN KEY ( edg_code )
+    REFERENCES hiltest.pf_expert_details_general ( edg_code );
+
+ALTER TABLE hiltest.pf_pf_expert_criteria_general ADD FOREIGN KEY ( criteria_code )
+    REFERENCES hiltest.pf_criteria ( criteria_code );
+
+ALTER TABLE hiltest.pf_pf_expert_criteria_general ADD FOREIGN KEY ( conditon_code )
+    REFERENCES hiltest.pf_conditon ( conditon_code );
+
+ALTER TABLE hiltest.pf_pf_expert_criteria_general ADD FOREIGN KEY ( val_con_code )
+    REFERENCES hiltest.pf_values_conditions ( val_con_code );
+
+ALTER TABLE hiltest.pf_expert_result ADD FOREIGN KEY ( emg_code )
+    REFERENCES hiltest.pf_expert_master_general ( emg_code );
+
+ALTER TABLE hiltest.pf_expert_result ADD FOREIGN KEY ( edg_code )
+    REFERENCES hiltest.pf_expert_details_general ( edg_code );
+
+ALTER TABLE hiltest.pf_expert_master_specific ADD FOREIGN KEY ( emg_code )
+    REFERENCES hiltest.pf_expert_master_general ( emg_code );
+
+ALTER TABLE hiltest.pf_expert_det_general_specific ADD FOREIGN KEY ( emg_code )
+    REFERENCES hiltest.pf_expert_master_general ( emg_code );
+
+ALTER TABLE hiltest.pf_expert_det_general_specific ADD FOREIGN KEY ( p_code )
+    REFERENCES hiltest.pf_products ( p_code );
+
+ALTER TABLE hiltest.pf_expert_det_general_specific ADD FOREIGN KEY ( ems_code )
+    REFERENCES hiltest.pf_expert_master_specific ( ems_code );
+
+ALTER TABLE hiltest.pf_expert_crit_gen_specific ADD FOREIGN KEY ( edgs_code )
+    REFERENCES hiltest.pf_expert_det_general_specific ( edgs_code );
+
+ALTER TABLE hiltest.pf_expert_crit_gen_specific ADD FOREIGN KEY ( criteria_code )
+    REFERENCES hiltest.pf_criteria ( criteria_code );
+
+ALTER TABLE hiltest.pf_client_setup ADD FOREIGN KEY ( pt_code )
+    REFERENCES hiltest.pf_payment_type ( pt_code );
+
+ALTER TABLE hiltest.pf_client_setup ADD FOREIGN KEY ( is_code )
+    REFERENCES hiltest.pf_income_source ( is_code );
+
+ALTER TABLE hiltest.pf_nominee_client ADD FOREIGN KEY ( rs_code )
+    REFERENCES hiltest.pf_relationship ( rs_code );
+
+ALTER TABLE hiltest.pf_joint_holder_client ADD FOREIGN KEY ( rs_code )
+    REFERENCES hiltest.pf_relationship ( rs_code );
+
+ALTER TABLE hiltest.pf_bank_detail_client ADD FOREIGN KEY ( bd_code )
+    REFERENCES hiltest.pf_bank_detail ( bd_code );

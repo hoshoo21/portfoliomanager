@@ -1,0 +1,10 @@
+CREATE OR REPLACE Procedure PF_DeleteGeneralExpert
+    (
+      emgCode nvarchar2
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_EXPERT_MASTER_GENERAL where EMG_CODE=emgCode;
+    end;

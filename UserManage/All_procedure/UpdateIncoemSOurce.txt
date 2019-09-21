@@ -1,0 +1,21 @@
+CREATE OR REPLACE Procedure PF_UpdateIncomeSource
+    ( 
+      iscode nvarchar2,
+       insource   nvarchar2       
+     
+        
+      )
+    IS
+     
+    begin 
+    
+        Update PF_INCOME_SOURCE
+        set DESCRIPTION = insource 
+        where IS_CODE = iscode; 
+        
+    
+       commit;
+        
+             
+       
+    end;

@@ -1,0 +1,29 @@
+CREATE OR REPLACE Procedure PF_InsertBroker
+    ( 
+      Broker nvarchar2  ,
+ Ntn_no nvarchar2  ,
+Loc nvarchar2 ,
+contNo nvarchar2  ,
+ email_add nvarchar2  ,
+ act nvarchar2   
+
+           
+       
+      )
+    IS
+      SeqNumber integer;
+    begin 
+    
+    
+     select nvl(Count(BROKER_CODE),0) into SeqNumber from PF_BROKER_SETUP;
+            SeqNumber :=SeqNumber +1;
+                       
+        Insert into  PF_BROKER_SETUP(BROKER_CODE,DESCRIPTION,NTN,LOCATION,PHONE,EMAIL,ACTIVE)
+        values (SeqNumber,Broker,Ntn_no,Loc ,contNo ,email_add,act);
+    
+       commit;
+        
+             
+       
+    end;
+/

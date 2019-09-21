@@ -1,0 +1,22 @@
+CREATE OR REPLACE Procedure PF_UpdateCompany
+    ( 
+      comCode nvarchar2,
+       companyName   nvarchar2,       
+       ntn_no   nvarchar2,
+       active nvarchar2
+        
+      )
+    IS
+     
+    begin 
+    
+        Update PF_COMPANIES 
+        set DESCRIPTION = companyName   ,NTN=ntn_no ,ACTIVE=active
+        where C_CODE = comCode; 
+        
+    
+       commit;
+        
+             
+       
+    end;

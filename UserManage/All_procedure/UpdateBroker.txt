@@ -1,0 +1,25 @@
+CREATE OR REPLACE Procedure PF_UpdateBroker
+    ( 
+     broker nvarchar2,
+       ntn_no nvarchar2,
+        loc nvarchar2,
+       phoNo nvarchar2,
+        email nvarchar2,
+          brokCode nvarchar2
+
+        
+      )
+    IS
+     
+    begin 
+    
+        Update  PF_BROKER_SETUP
+        set DESCRIPTION=broker , NTN=ntn_no,LOCATION=loc  , PHONE=phoNo  ,EMAIL=email  
+                where BROKER_CODE = brokCode; 
+        
+    
+       commit;
+        
+             
+       
+    end;

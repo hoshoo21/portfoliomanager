@@ -1,0 +1,10 @@
+CREATE OR REPLACE Procedure PF_DeleteIncomeSource
+    (
+      iscode int
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_INCOME_SOURCE where IS_CODE=iscode;
+    end;

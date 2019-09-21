@@ -1,0 +1,42 @@
+CREATE OR REPLACE Procedure PF_InsertClient
+    ( 
+      
+       clientname   nvarchar2,       
+       gend   nvarchar2,
+        nic_no   nvarchar2,       
+       ntn_no  nvarchar2,
+        old_no   nvarchar2,
+        csdate nvarchar2,       
+       actv   nvarchar2,
+        iscode   nvarchar2,       
+       ptcode   nvarchar2,
+            clientCate   nvarchar2,       
+       islam   nvarchar2,
+       CPonline   nvarchar2,       
+       refer   nvarchar2,
+        ContNo   nvarchar2,       
+       email_add   nvarchar2,
+        addres   nvarchar2,
+        username   nvarchar2
+       
+      )
+    IS
+      SeqNumber integer;
+    begin 
+    
+    
+     select nvl(Count(C_CODE),0) into SeqNumber from PF_CLIENT_SETUP;
+            SeqNumber :=SeqNumber +1;
+                       
+        Insert into  PF_CLIENT_SETUP(C_CODE,DESCRIPTION, GENDER,NIC,NTN,
+        OLD_no,CS_DATE,ACTIVE,IS_CODE,PT_CODE,CLIENT_CATEGORY,ISLAMIC,
+        CP_ONLINE,REFER,CONTACT_NO,Email,Address,userid)
+        
+        values (SeqNumber,clientname,gend,nic_no,ntn_no,old_no,csdate,actv,iscode,ptcode,clientCate,islam,CPonline,refer,ContNo,email_add,addres,username);
+    
+       commit;
+        
+             
+       
+    end;
+/

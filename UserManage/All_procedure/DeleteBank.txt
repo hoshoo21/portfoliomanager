@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure PF_DeleteBank
+    (
+      bdcode nvarchar2
+       
+       
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_BANK_DETAIL where BD_CODE=bdcode;
+    end;

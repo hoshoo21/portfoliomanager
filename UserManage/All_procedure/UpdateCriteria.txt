@@ -1,0 +1,21 @@
+CREATE OR REPLACE Procedure PF_UpdateCriteria
+    ( 
+     crit nvarchar2,
+       act nvarchar2,
+        CritCode nvarchar2
+        
+      )
+    IS
+     
+    begin 
+    
+        Update PF_CRITERIA
+        set DESCRIPTION=crit ,ACTIVE=act 
+        where CRITERIA_CODE = CritCode ; 
+        
+    
+       commit;
+        
+             
+       
+    end;

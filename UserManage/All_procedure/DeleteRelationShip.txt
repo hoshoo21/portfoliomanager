@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure PF_DeleteRelationShip
+    (
+      rscode nvarchar2
+       
+       
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_RELATIONSHIP where RS_CODE=rscode;
+    end;

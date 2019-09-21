@@ -1,0 +1,21 @@
+CREATE OR REPLACE Procedure PF_UpdateRelationShip
+    ( 
+     relShip nvarchar2,
+       rscode nvarchar2
+       
+        
+      )
+    IS
+     
+    begin 
+    
+        Update PF_RELATIONSHIP
+        set DESCRIPTION=relShip
+        where RS_CODE = rscode; 
+        
+    
+       commit;
+        
+             
+       
+    end;

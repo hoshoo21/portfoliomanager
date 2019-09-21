@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure GetCriteria
+(    
+      prc out   sys_refcursor
+      )
+    IS
+    begin 
+      open prc for
+ select * from  PF_CRITERIA
+;
+
+end;
+/

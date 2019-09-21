@@ -1,0 +1,25 @@
+CREATE OR REPLACE Procedure PF_InsertCompany
+    ( 
+      
+       comp   nvarchar2,  
+            ntn_no   nvarchar2,
+              actv   nvarchar2
+       
+      )
+    IS
+      SeqNumber integer;
+    begin 
+    
+    
+     select nvl(Count(C_CODE),0) into SeqNumber from PF_COMPANIES;
+            SeqNumber :=SeqNumber +1;
+                       
+        Insert into  PF_COMPANIES(C_CODE,DESCRIPTION, NTN,ACTIVE)
+        values (SeqNumber,comp,ntn_no, actv);
+    
+       commit;
+        
+             
+       
+    end;
+/

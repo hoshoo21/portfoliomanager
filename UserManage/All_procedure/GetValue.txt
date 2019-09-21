@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure GetValue
+(    
+      prc out   sys_refcursor
+      )
+    IS
+    begin 
+      open prc for
+ select * from  PF_VALUES
+;
+
+end;
+/

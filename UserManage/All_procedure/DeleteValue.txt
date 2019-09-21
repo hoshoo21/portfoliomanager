@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure PF_DeleteValue
+    (
+      valCode nvarchar2
+       
+       
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_VALUES where VALUE_CODE=valCode;
+    end;

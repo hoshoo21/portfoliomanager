@@ -1,0 +1,11 @@
+
+CREATE OR REPLACE Procedure PF_DeletePaymentType
+    (
+      ptcode int
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_PAYMENT_TYPE where PT_CODE=ptcode;
+    end;

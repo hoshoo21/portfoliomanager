@@ -1,0 +1,24 @@
+CREATE OR REPLACE Procedure PF_InsertRelationShip
+    ( 
+      
+       relShip nvarchar2  
+           
+       
+      )
+    IS
+      SeqNumber integer;
+    begin 
+    
+    
+     select nvl(Count(RS_CODE),0) into SeqNumber from PF_RELATIONSHIP;
+            SeqNumber :=SeqNumber +1;
+                       
+        Insert into  PF_RELATIONSHIP(RS_CODE,DESCRIPTION)
+        values (SeqNumber,relShip );
+    
+       commit;
+        
+             
+       
+    end;
+/

@@ -1,0 +1,21 @@
+CREATE OR REPLACE Procedure PF_UpdateProduct
+    ( 
+      Pcode nvarchar2,
+       productname   nvarchar2,       
+       active   nvarchar2
+        
+      )
+    IS
+     
+    begin 
+    
+        Update PF_PRODUCTS 
+        set DESCRIPTION = productname   , ACTIVE=active
+        where P_CODE = Pcode; 
+        
+    
+       commit;
+        
+             
+       
+    end;

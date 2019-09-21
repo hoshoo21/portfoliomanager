@@ -1,0 +1,10 @@
+CREATE OR REPLACE Procedure PF_DeleteJoinClient
+    (
+      clientcode nvarchar2
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_JOINT_HOLDER_CLIENT where CLIENT_CODE=clientcode;
+    end;

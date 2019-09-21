@@ -1,0 +1,24 @@
+CREATE OR REPLACE Procedure PF_UpdateJoinClient
+    ( 
+     jointClient nvarchar2,
+       adress nvarchar2,
+        phone_no nvarchar2,
+         nic_no nvarchar2,
+          clientcode nvarchar2,
+          act nvarchar2
+        
+      )
+    IS
+     
+    begin 
+    
+        Update PF_JOINT_HOLDER_CLIENT 
+        set NAME = jointClient   , ADDRESS=adress ,PHONE=phone , NIC=nic_no ,  ACTIVE=act
+        where CLIENT_CODE = clientcode; 
+        
+    
+       commit;
+        
+             
+       
+    end;

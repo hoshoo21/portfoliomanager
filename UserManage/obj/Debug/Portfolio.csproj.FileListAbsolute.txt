@@ -1,0 +1,84 @@
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\csc.exe
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\System.Collections.Immutable.dll
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\System.Reflection.Metadata.dll
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\vbc.exe
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\VBCSCompiler.exe
+C:\Kashif New\Potfolio project\UserManage\bin\roslyn\VBCSCompiler.exe.config
+C:\Kashif New\Potfolio project\UserManage\bin\UserManage.dll.config
+C:\Kashif New\Potfolio project\UserManage\bin\UserManage.dll
+C:\Kashif New\Potfolio project\UserManage\bin\UserManage.pdb
+C:\Kashif New\Potfolio project\UserManage\bin\Newtonsoft.Json.dll
+C:\Kashif New\Potfolio project\UserManage\bin\System.Net.Http.Formatting.dll
+C:\Kashif New\Potfolio project\UserManage\bin\System.Web.Http.dll
+C:\Kashif New\Potfolio project\UserManage\bin\System.Web.Http.WebHost.dll
+C:\Kashif New\Potfolio project\UserManage\bin\Newtonsoft.Json.xml
+C:\Kashif New\Potfolio project\UserManage\bin\System.Net.Http.Formatting.xml
+C:\Kashif New\Potfolio project\UserManage\bin\System.Web.Http.xml
+C:\Kashif New\Potfolio project\UserManage\bin\System.Web.Http.WebHost.xml
+C:\Kashif New\Potfolio project\UserManage\obj\Debug\Portfolio.csproj.CoreCompileInputs.cache
+C:\Kashif New\Potfolio project\UserManage\obj\Debug\Portfolio.csproj.CopyComplete
+C:\Kashif New\Potfolio project\UserManage\obj\Debug\UserManage.dll
+C:\Kashif New\Potfolio project\UserManage\obj\Debug\UserManage.pdb
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\csc.exe
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\System.Collections.Immutable.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\System.Reflection.Metadata.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\vbc.exe
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\VBCSCompiler.exe
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\roslyn\VBCSCompiler.exe.config
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\UserManage.dll.config
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\UserManage.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\UserManage.pdb
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\Newtonsoft.Json.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\System.Net.Http.Formatting.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\System.Web.Http.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\System.Web.Http.WebHost.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\Newtonsoft.Json.xml
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\System.Net.Http.Formatting.xml
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\System.Web.Http.xml
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\bin\System.Web.Http.WebHost.xml
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\obj\Debug\Portfolio.csprojAssemblyReference.cache
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\obj\Debug\Portfolio.csproj.CoreCompileInputs.cache
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\obj\Debug\Portfolio.csproj.CopyComplete
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\obj\Debug\UserManage.dll
+E:\Zeal\Github Zeal\Potfolio-project\UserManage\obj\Debug\UserManage.pdb
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\csc.exe
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\System.Collections.Immutable.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\System.Reflection.Metadata.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\vbc.exe
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\VBCSCompiler.exe
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\roslyn\VBCSCompiler.exe.config
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\UserManage.dll.config
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\UserManage.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\UserManage.pdb
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\Newtonsoft.Json.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\Oracle.DataAccess.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\System.Net.Http.Formatting.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\System.Web.Http.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\System.Web.Http.WebHost.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\Newtonsoft.Json.xml
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\System.Net.Http.Formatting.xml
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\System.Web.Http.xml
+C:\Kashif Github Projects\Potfolio-project\UserManage\bin\System.Web.Http.WebHost.xml
+C:\Kashif Github Projects\Potfolio-project\UserManage\obj\Debug\Portfolio.csproj.CoreCompileInputs.cache
+C:\Kashif Github Projects\Potfolio-project\UserManage\obj\Debug\Portfolio.csproj.CopyComplete
+C:\Kashif Github Projects\Potfolio-project\UserManage\obj\Debug\UserManage.dll
+C:\Kashif Github Projects\Potfolio-project\UserManage\obj\Debug\UserManage.pdb
+C:\Kashif Github Projects\Potfolio-project\UserManage\obj\Debug\Portfolio.csprojAssemblyReference.cache

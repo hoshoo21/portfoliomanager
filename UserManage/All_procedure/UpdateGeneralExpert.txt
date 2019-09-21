@@ -1,0 +1,21 @@
+CREATE OR REPLACE Procedure PF_UpdateGeneralExpert
+    ( 
+      emgCode nvarchar2,
+       GenerlExpt   nvarchar2,       
+       active   nvarchar2
+        
+      )
+    IS
+     
+    begin 
+    
+        Update PF_EXPERT_MASTER_GENERAL 
+        set DESCRIPTION = GenerlExpt   , ACTIVE=active
+        where EMG_CODE = emgCode; 
+        
+    
+       commit;
+        
+             
+       
+    end;

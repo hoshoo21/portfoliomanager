@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure PF_GetPaymentType
+(    
+      prc out   sys_refcursor
+      )
+    IS
+    begin 
+      open prc for
+ select * from  PF_PAYMENT_TYPE
+;
+
+end;
+/

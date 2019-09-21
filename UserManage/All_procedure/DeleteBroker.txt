@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure PF_DeleteBroker
+    (
+      bdcode nvarchar2
+       
+       
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_BROKER_SETUP where BROKER_CODE=bdcode;
+    end;

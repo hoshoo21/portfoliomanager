@@ -1,0 +1,10 @@
+CREATE OR REPLACE Procedure PF_DeleteProduct
+    (
+      Pcode nvarchar2
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_PRODUCTS where P_CODE=Pcode;
+    end;

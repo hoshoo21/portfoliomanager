@@ -1,0 +1,22 @@
+CREATE OR REPLACE Procedure PF_UpdateValue
+    ( 
+     val nvarchar2,
+       act nvarchar2,
+ValCode nvarchar2
+       
+        
+      )
+    IS
+     
+    begin 
+    
+        Update PF_VALUES
+        set DESCRIPTION=val  ,ACTIVE=act 
+        where VALUE_CODE = ValCode ; 
+        
+    
+       commit;
+        
+             
+       
+    end;

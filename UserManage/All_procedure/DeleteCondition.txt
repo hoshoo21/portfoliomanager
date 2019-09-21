@@ -1,0 +1,10 @@
+CREATE OR REPLACE Procedure PF_DeleteCondition
+    (
+      CondCode nvarchar2
+                
+    )
+    IS
+    
+    begin 
+   delete from PF_CONDITON where CondCode
+    end;

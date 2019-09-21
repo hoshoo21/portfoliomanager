@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure GetBank
+(    
+      prc out   sys_refcursor
+      )
+    IS
+    begin 
+      open prc for
+ select * from  PF_BANK_DETAIL
+;
+
+end;
+/

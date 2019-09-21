@@ -1,0 +1,21 @@
+CREATE OR REPLACE Procedure PF_UpdateBank
+    ( 
+     bank nvarchar2,
+       bdcode nvarchar2
+       
+        
+      )
+    IS
+     
+    begin 
+    
+        Update PF_BANK_DETAIL
+        set DESCRIPTION=bank
+        where BD_CODE = bdcode; 
+        
+    
+       commit;
+        
+             
+       
+    end;

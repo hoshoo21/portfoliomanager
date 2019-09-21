@@ -1,0 +1,27 @@
+CREATE OR REPLACE Procedure PF_InsertJoinClient
+    ( 
+      
+           jontClient nvarchar2,  
+            adress nvarchar2,
+              nic_no nvarchar2,
+           ContNo nvarchar2,  
+            act nvarchar2
+           
+      )
+    IS
+      SeqNumber integer;
+    begin 
+    
+    
+     select nvl(Count(CLIENT_CODE),0) into SeqNumber from PF_JOINT_HOLDER_CLIENT;
+            SeqNumber :=SeqNumber +1;
+                       
+        Insert into  PF_JOINT_HOLDER_CLIENT(CLIENT_CODE,NAME, ADDRESS,PHONE,NIC,ACTIVE)
+        values (SeqNumber,jontClient ,adress ,ContNo,nic_no, act);
+    
+       commit;
+        
+             
+       
+    end;
+/

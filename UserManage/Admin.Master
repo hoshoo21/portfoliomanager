@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title>Zeal Portfolio</title>
+    <script src="bootstrap/js/jquery-2.2.4.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap/css/NewSideBar.css" rel="stylesheet" />
+    <link href="bootstrap/css/DatatableCSS.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css" rel="stylesheet" />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+    <link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css"
+        rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+    <style type="text/css">
+        .control-label {
+            font-weight: 700;
+        }
+
+        .card card-outline-success {
+            margin-top: -21px;
+            width: 103%;
+        }
+
+        .card-header {
+            background-color: #0C5A59;
+            height: 46px;
+        }
+
+
+        h4 {
+            padding-top: 12px;
+            padding-left: 15px;
+            color: white;
+        }
+
+        .chosen-choices {
+            height: 34px;
+            background: white;
+        }
+
+        .checkbox {
+            position: relative;
+            display: inline-block;
+            border: 1px solid #a9a9a9;
+            border-radius: .25em;
+            width: 1.3em;
+            height: 1.3em;
+            float: left;
+            margin-right: .5em;
+        }
+
+        .checkbox {
+            border-width: inherit;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#">Zeal Portfolio</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="sidebar-header">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                            alt="User picture">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Muhammad
+           
+                            <strong>Kashif</strong>
+                        </span>
+                        <span class="user-role">Administrator</span>
+                        <span class="user-status">
+                            <i class="fa fa-circle"></i>
+                            <span>Online</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+                <div class="sidebar-search">
+                    <div>
+                        <div class="input-group">
+                            <input type="text" class="form-control search-menu" placeholder="Search...">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- sidebar-search  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>Setups</span>
+                        </li>
+                        <%--   <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-user"></i>
+                                <span>User  Manage</span>
+
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                    <li>
+                                        <a href="AddUser.aspx">User New User</a>
+                                    </li>
+                                    <li>
+                                        <a href="UserTickerMap.aspx">User Tricker Map</a>
+                                    </li>
+                                    <li>
+                                        <a href="UserControl.aspx">Add User Control</a>
+                                    </li>
+                                    <li>
+                                        <a href="AddProject.aspx">Add User Project</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>--%>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-file"></i>
+                                <span>Portfolio setups</span>
+
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="AddProduct.aspx">Product Setup</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="Condition.aspx">Condition Setup</a>
+                                    </li>
+                                    <li>
+                                        <a href="Values.aspx">Value Setup</a>
+                                    </li>
+                                    <li>
+                                        <a href="Criteria.aspx">Criteria Setup</a>
+                                    </li>
+                                    <li>
+                                        <a href="PaymentType.aspx">Payment Setup</a>
+                                    </li>
+                                    <li>
+                                        <a href="ClientSetup.aspx">Client Setup</a>
+                                    </li>
+                                    <li>
+                                        <a href="IncomeSource.aspx">Income Source Setup</a>
+                                    </li>
+                                    <%--     <li class="nav-item">
+                                    <a class="nav-link" href="CompanySetup.aspx">Company Setup</a>
+                                </li>--%>
+                                    <li>
+                                        <a class="submenu" id="relsetup" href="Relationship.aspx">Relation Ship Setup</a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu" id="joinclientsetup" href="JointHolderClient.aspx">Join Client Holder Setup</a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu" id="banksetup" href="BankDetail.aspx">Bank Setup</a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu" href="Broker.aspx">Broker Setup</a>
+                                    </li>
+                                    <li>
+                                        <a class="submenu" href="AddCompany.aspx">Company Setup </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="ConditionValue.aspx">Condition Value</a>
+                                    </li>
+                                    <li>
+                                        <a href="Category.aspx">Category</a>
+                                    </li>
+                                    <li>
+                                        <a href="GeneralExpert.aspx">General Expert Master</a>
+                                    </li>
+                                    <li>
+                                        <a href="GeneralExpertDetail.aspx">General Expert Detail</a>
+                                    </li>
+                                    <%-- <li>
+                                        <a href="SpecificExpert.aspx">Specific Expert Master</a>
+                                    </li>--%>
+
+                                    <li>
+                                        <a href="SpecificExpertDetail.aspx">Specific Expert Detail</a>
+                                    </li>
+                                    <%--  <li class="nav-item">
+                                    <a class="nav-link" href="ExpertCriteriaGeneral.aspx">General Expert Criteria</a>
+                                </li>--%>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-file"></i>
+                                <span>Order Setups</span>
+
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="OrderType.aspx">Order Type</a>
+                                    </li>
+                                    <li>
+                                        <a href="ActionType.aspx">Action Type</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="Timming.aspx">Timming</a>
+                                    </li>
+                                    <li>
+                                        <a href="OrderProgress.aspx">Order Progress</a>
+                                    </li>
+                                    <li>
+                                        <a href="OrderForm.aspx">Order Form</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-file"></i>
+                                <span>XBRL Setups</span>
+
+                            </a>
+                            <div class="sidebar-submenu">
+
+
+
+                                <ul>
+                                    <li>
+                                        <a href="XBRL.aspx">XBRL Menu</a>
+                                    </li>
+                                    <%--  <li>
+                                        <a href="CountrySetupXBRL.aspx">Country</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="MultiYearInterface.aspx">Multi Year Interface Upload</a>
+                                    </li>
+                                    <li>
+                                        <a href="ReportingStructure.aspx">Reporting Structure</a>
+                                    </li>
+                                    <li>
+                                        <a href="InvestorProfileStatusSetup.aspx">Investor Profile Desc</a>
+                                    </li>
+                                    <li>
+                                        <a href="Questionsetup.aspx">Question Setup</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="answersetup.aspx">Answer Setup</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="QuestionTypeSetup.aspx">Question Category</a>
+                                    </li>
+                                    <li>
+                                        <a href="AssociationSetup.aspx">Association Setup</a>
+                                    </li>
+                                    <li>
+                                        <a href="VariableSetup.aspx">Variable Setup</a>
+                                    </li>
+                                    <li>
+                                        <a href="FinancialAnalysis.aspx">Financial Analysis Setup</a>
+                                    </li>
+                                    <li>
+                                        <a href="StandardSetup.aspx">Standard Setup</a>
+                                    </li>
+                                    <li>
+                                        <a href="FormulaSetup.aspx">Formula Setup</a>
+                                    </li>--%>
+                                </ul>
+
+
+
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+
+        </nav>
+        <!-- sidebar-wrapper  -->
+        <main class="page-content" style="margin-top: -9px;    margin-left: 31px; ">
+             <%--<div class="container">--%>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <%--   </div>--%>
+        </main>
+        <!-- page-content" -->
+    </div>
+    <!-- page-wrapper -->
+
+    <script src="Javascript/Product.js"></script>
+    <script src="bootstrap/js/NewSideBar.js"></script>
+    <script src="bootstrap/js/DatatableJS.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+    <script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js"
+        type="text/javascript"></script>
+
+    <%-- <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>--%>
+
+
+
+
+
+
+    <%-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>--%>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+CREATE OR REPLACE Procedure PF_UpdateCondition
+    ( 
+     Cond nvarchar2,
+       act nvarchar2,
+     CondCode  nvarchar2
+       
+        
+      )
+    IS
+     
+    begin 
+    
+        Update PF_CONDITON 
+        set DESCRIPTION=Cond ,ACTIVE=act 
+        where CONDITION_CODE = CondCode;
+        
+    
+       commit;
+        
+             
+       
+    end;

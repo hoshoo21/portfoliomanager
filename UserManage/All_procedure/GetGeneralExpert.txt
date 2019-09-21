@@ -1,0 +1,12 @@
+CREATE OR REPLACE Procedure GetGeneralExpert
+(    
+      prc out   sys_refcursor
+      )
+    IS
+    begin 
+      open prc for
+ select * from  PF_EXPERT_MASTER_GENERAL
+;
+
+end;
+/
